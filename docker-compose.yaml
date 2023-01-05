@@ -4,7 +4,7 @@ services:
     restart: always
     container_name: nucleon
     ports:
-      - "578:8000"
+      - "8000:8000"
     build: .
     logging:
       driver: "json-file"
@@ -17,7 +17,10 @@ services:
   nucleonredis:
     restart: always
     container_name: nucleonredis
+    ports:
+      - "6379:6379"
     image: eqalpha/keydb
+    command: --requirepass YOURPASSWORD
     logging:
       driver: "json-file"
       options:
