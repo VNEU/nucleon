@@ -19,7 +19,7 @@ fn main() {
     let mut servers: Vec<String> = Vec::new();
     let mut bind = "127.0.0.1:8000".to_string();
     let mut redis_url = "redis://localhost".to_string();
-    let mut disable_redis = false;
+    let mut disable_redis = true;
     let mut log_level = "info".to_string();
 
     {
