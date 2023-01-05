@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  nucleon:
+    restart: always
+    container_name: nucleon
+    ports:
+      - "578:8000"
+    build: .
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "1"
+        max-size: "1m"
+
+
+
+  nucleonredis:
+    restart: always
+    container_name: nucleonredis
+    image: eqalpha/keydb
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "1"
+        max-size: "1m"
+
+networks:
+  default:
+    name: nucleonnet
