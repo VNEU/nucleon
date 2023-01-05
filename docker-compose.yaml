@@ -12,21 +12,6 @@ services:
         max-file: "1"
         max-size: "1m"
 
-
-
-  nucleonredis:
-    restart: always
-    container_name: nucleonredis
-    ports:
-      - "6379:6379"
-    image: eqalpha/keydb
-    command: --requirepass YOURPASSWORD
-    logging:
-      driver: "json-file"
-      options:
-        max-file: "1"
-        max-size: "1m"
-
 networks:
   default:
     name: nucleonnet
