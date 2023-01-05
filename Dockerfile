@@ -5,4 +5,4 @@ RUN cargo install --path .
 
 FROM debian:11-slim
 COPY --from=builder /usr/local/cargo/bin/nucleon /usr/local/bin/nucleon
-CMD ["nucleon", "-bind 0.0.0.0:8000 0.0.0.0:8001"]
+CMD ["nucleon"]
